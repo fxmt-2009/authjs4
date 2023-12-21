@@ -1,7 +1,6 @@
 <script>
 
-//export let data 
-//console.log("data log in home page.svelte from layout.server.js :", data)
+
 </script>
 
 <svelte:head>
