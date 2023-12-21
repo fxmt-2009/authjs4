@@ -4,7 +4,7 @@
 import { MongoClient } from 'mongodb';
 import { NODE_ENV } from '$env/static/private';
 
-let MONGODB_CONNECTION_STRING = "mongodb+srv://pfycycle:Adel2023@jobruption.32mlfah.mongodb.net/?retryWrites=true&w=majority"
+let MONGODB_CONNECTION_STRING = "someconnection..."
 
 if (!MONGODB_CONNECTION_STRING) {
  throw new Error('Invalid/Missing environment variable: "MONGODB_CONNECTION_STRING"');
