@@ -4,9 +4,7 @@
 
 export const load = async ({event}) => {
     
-   // let requestIp = event.getClientAddress(); // IP from Client Request
-    // console.log('log layout.server.js IP Address from Client Request: ', requestIp);
- 
+
     
  
   return {
