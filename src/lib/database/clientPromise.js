@@ -10,7 +10,7 @@ if (!MONGODB_CONNECTION_STRING) {
  throw new Error('Invalid/Missing environment variable: "MONGODB_CONNECTION_STRING"');
 }
 
-const uri = "mongodb+srv://pfycycle:Adel2023@jobruption.32mlfah.mongodb.net/?retryWrites=true&w=majority";
+const uri = "someconnection";
 const options = {};
 
 let client;
