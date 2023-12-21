@@ -2,39 +2,16 @@
      import { page } from '$app/stores';
      import { signIn, signOut } from '@auth/sveltekit/client';
      import logo from '$lib/assets/logo.png';
-	import Google from '$lib/components/Google.svelte';
+	
 	import Discord from '$lib/components/Discord.svelte';
-	import Apple from '$lib/components/Apple.svelte';
-	import Instagram from '$lib/components/Instagram.svelte';
-	import Facebook from '$lib/components/Facebook.svelte';
-    import Github from '../../lib/components/Github.svelte';
+	import Github from '../../lib/components/Github.svelte';
 
 
-     let email = '';
-
-const handleEmailSignIn = () => {
-    signIn('email', { email, callbackUrl: '/protected' });
-};
+ 
 
 const handleGithubSignIn = () => {
     signIn('github', { callbackUrl: '/protected' });
 };
-
-const handleGoogleSignIn = () => {
-    signIn('google', { callbackUrl: '/protected' });
-};
-
-// const handleFacebookSignIn = () => {
-//     signIn('facebook', { callbackUrl: '/protected' });
-// };
-
-const handleAppleSignIn = () => {
-    signIn('apple', { callbackUrl: '/protected' });
-};
-
-// const handleInstagramSignIn = () => {
-//     signIn('instagram', { callbackUrl: '/protected' });
-// };
 
 const handleDiscordSignIn = () => {
     signIn('discord', { callbackUrl: '/protected' });
@@ -78,21 +55,7 @@ const handleSignOut = () => {
 			<Github/>Continue with Github
 		</button>
 		
-		<button on:click={handleGoogleSignIn}>
-			<Google /> Continue with Google
-		</button>
 
-		<!-- <button on:click={handleFacebookSignIn}>
-			<Facebook/> Continue with Facebook
-		</button> -->
-
-		<button on:click={handleAppleSignIn}>
-			<Apple/> Continue with Apple
-		</button>
-
-		<!-- <button on:click={handleInstagramSignIn}>
-			<Instagram/> Continue with Instagram
-		</button> -->
 
 		<button on:click={handleDiscordSignIn}>
 		   <Discord/>  Continue with Discord
