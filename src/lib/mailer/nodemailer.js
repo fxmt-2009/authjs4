@@ -4,11 +4,11 @@
 
 // const transporter = nodemailer.createTransport({
 //     port: 587,               // true for 465, false for other ports
-//     host: "smtp.ionos.com",
+//     host: "something",
 //     secure: false,
 //     auth: {
-//         user: 'orders@foodmood.club',
-//         pass: '@Adel4000'
+//         user: 'someuser',
+//         pass: 'somepass'
 //     },
 //     tls: {
 //         // do not fail on invalid certs
@@ -29,13 +29,13 @@
 //     //******  nodemailer setup part 2 *********** //
 //         //compose your message//
 //         const mailOptions = {
-//             from: 'orders@sveltesphere.club',
+//             from: 'here',
 //             //to: '`${data.useremail}`'
-//             to: 'fxmt2009@gmail.com',  
+//             to: 'you',  
 //             subject: 'Please confirm your email within the next 60 minutes-' + token,
             
 //             html: '<p>Click <a href="http://localhost:5000/confirmemail?token=' + token + ' ">here</a> to verify your email</p>'
-//             //html: '<p>Click <a href="https://www.sveltesphere.com/confirmemail?token=' + token + ' ">here</a> to verify your email</p>'
+//             //html: '<p>Click <a href="https://www.example.com/confirmemail?token=' + token + ' ">here</a> to verify your email</p>'
 //         };
 
 
@@ -68,7 +68,7 @@
 //       },
 //       from: EMAIL_FROM
 //      }),
-//      GoogleProvider({ clientId: GOOGLE_CLIENT_ID, clientSecret: GOOGLE_CLIENT_SECRET })
+//      DiscordProvider({cliendId :"someappid", clientSecret :"someappsecret" }),
 //     ],
 //     adapter: MongoDBAdapter(clientPromise, { databaseName: NODE_ENV })
 //    });
