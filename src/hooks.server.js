@@ -1,10 +1,6 @@
 
 
 import { sequence } from '@sveltejs/kit/hooks'; 
-
-
-//to import private variables/key for npm run build, you need to import {env} from $env/dynamic/private
-// then attach the variable name to env so : env.variablename
 import { env } from '$env/static/private'
 import { SvelteKitAuth } from '@auth/sveltekit';
 import { MongoDBAdapter } from '@auth/mongodb-adapter';
@@ -12,12 +8,6 @@ import GitHubProvider from '@auth/core/providers/github';
 import DiscordProvider from "@auth/core/providers/discord"
 import clientPromise from '$lib/database/clientPromise';
 import { building } from '$app/environment';
-
-
-
-
-
-
 
 export const handle = SvelteKitAuth({
 	trustHost :true,
@@ -33,29 +23,6 @@ export const handle = SvelteKitAuth({
 	}
 });
 
-  
-//   export const handle =  SvelteKitAuth({
-// 	trustHost :true,
-// 	providers: [
-// 		GitHub({ clientId:"58be4caf4cad2b6f12c1", clientSecret:"9af329c4829e203c5ec132b012f1bec050d60c69" }),
-// 		GoogleProvider({ clientId:"622249660823-svtgmsjpormuv89va3fd92lr3urrnfjf.apps.googleusercontent.com", clientSecret: "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" }),
-// 		EmailProvider({
-// 			      server: {
-// 			       host: "smtp.ionos.com",
-// 			       port: 587,
-// 			       auth: {
-// 			          user: 'orders@foodmood.club',
-//                       pass: '@Adel4000'
-// 			       }
-// 			      },
-// 			      from: "orders@foodmood.club authjs magic link"
-// 		}),
-// 		 AppleProvider({clientId : "", clientSecret : ""})
-// 	],
-// 	adapter: MongoDBAdapter(clientPromise, { databaseName: "authjsdb" }),
-// 	secret : "wGRfp8DAPvXzptuuXqusOsL+Q1qyj19dmoRxEhaQIqQ",
-// 	pages: {
-// 		signIn: '/login',
-// 		signOut: '/login'
+
 // 	}
 // });
